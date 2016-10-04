@@ -1,0 +1,24 @@
+version: '2'
+services:
+  frontend:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    environment:
+      NODE_ENV: 'production'
+      MONGO_HOST: mongodb://mongodb/demo
+      PORT: 3000
+    depends_on:
+      - mongodb
+
+  mongodb:
+    image: mongo:3.2
+
+  lb:
+    image: dockercloud/haproxy
+    ports:
+      - 3000:80
+    links:
+      - frontend
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
