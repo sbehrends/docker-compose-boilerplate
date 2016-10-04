@@ -6,7 +6,12 @@ services:
       dockerfile: Dockerfile
     environment:
       NODE_ENV: 'production'
-      MONGO_HOST: mongodb
+      MONGO_HOST: mongodb://mongodb/demo
       PORT: 3000
     ports:
       - 3000:3000
+    depends_on:
+      - mongodb
+
+  mongodb:
+    image: mongo:3.2
