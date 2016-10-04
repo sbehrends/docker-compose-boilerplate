@@ -1,0 +1,19 @@
+# Wild
+*.log
+*.tmp
+*.bak
+*.bck
+
+# Files
+Dockerfile
+
+# Folders
+.git
+node_modules
+.npm
+
+## Local config files
+.dockerignore
+
+## Markdown stuff
+*.md

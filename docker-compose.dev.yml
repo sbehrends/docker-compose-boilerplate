@@ -1,0 +1,9 @@
+version: '2'
+services:
+  frontend:
+    command: nodemon --exec npm start
+    environment:
+      NODE_ENV: 'development'
+    volumes:
+      - ./:/usr/src/app
+      - /usr/src/app/node_modules

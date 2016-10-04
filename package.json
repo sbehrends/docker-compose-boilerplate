@@ -1,0 +1,17 @@
+{
+  "name": "docker-compose-boilerplate",
+  "url": "https://github.com/sbehrends/docker-compose-boilerplate",
+  "version": "0.0.1",
+  "description": "A Docker Compose Boilerplate. From development to production",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "docker-compose -f docker-compose.yml -f docker-compose.dev.yml up"
+  },
+  "author": "Sergio Behrends",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.14.0"
+  },
+  "devDependencies": {}
+}
